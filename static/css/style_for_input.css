@@ -1,0 +1,160 @@
+html{
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+.header{
+    display: flex;
+    position: relative;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;   
+}
+
+.header_content{
+    display: flex;
+    position: absolute;
+    width: 74rem;
+    height: 3rem;
+    justify-content: space-between;
+}
+
+.statistics{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 36px;
+    top: 6px;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(25, 94, 223);
+}
+
+.main{
+    display: flex;
+    position: relative;
+    height: auto;
+    justify-content: center;
+    align-items: center; 
+}
+
+.main_content{
+    width: 73rem;
+}
+
+.content_name{
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.content_inf{
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: inherit;
+}
+
+h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: inherit;
+}
+
+.data_array{
+    display: flex;
+    position: relative;
+    width: 39rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+ul {
+    padding-left: 2rem;
+    list-style-type: none;
+    
+}
+
+.value{
+    height: 1.8rem;
+    width: 19rem;
+    border: none;
+    border-radius: 5px;
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    padding-left: 1rem;
+    background-color: rgb(233, 233, 255);
+}
+
+
+.courses_list{
+    height: 1.92rem;
+    width: 20.1rem;
+    border: 25px;
+    border-radius: 5px;
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+    padding-left: 1rem;
+    font-size: 1rem;
+    background-color: rgb(233, 233, 255);
+}
+
+.send{
+    display: flex;
+    position: relative;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 36px;
+    top: 44px;
+    left: 16rem;
+    color: #ffffff;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: rgb(25, 94, 223);
+}
+
+.footer{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.footer_inf{
+    width: 75rem;
+}
+
+.support_line{
+    position: relative;
+    color: #858585;
+    top: 74px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.company{
+    position: relative;
+    color: #858585;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 95px;
+    border-top: 1px solid #cbcbcc;
+}

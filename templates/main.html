@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>statistics</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body class="main">
+    <div class="header">
+        <img onclick="document.location='/'" class="brend" src="{{ url_for('static', filename='images/brend.png') }}">
+        <button onclick="document.location='/statistics'" class="statistics">click</button>
+    </div>
+    <div class="main_content">
+        <div class="img1">
+            <div class="img1_inf">
+                <p class="name">
+                    Академическая динамика наших студентов
+                </p>
+                <h3 class="brief_inf">
+                    Эти цифры и факты взаимодействуют с различными аспектами студенческой жизни: от общей успеваемости до участия в внеучебных мероприятиях.
+                </h3>
+            </div>
+            
+        </div>
+        <img class="guap1" src="{{ url_for('static', filename='images/guap1.jpg') }}">
+        <div class="slider">
+            <div class="slider_line">
+                <img class="i1" src="{{ url_for('static', filename='images/2.jpg') }}">
+                <img class="i1" src="{{ url_for('static', filename='images/3.jpg') }}">
+                <img class="i1" src="{{ url_for('static', filename='images/1.jpg') }}">
+                <img class="i1" src="{{ url_for('static', filename='images/4.jpg') }}">
+            </div>
+            <div class="button">
+                <button class="slider_next_1"></button>
+                <button class="slider_next_2"></button>
+                <button class="slider_next_3"></button>
+                <button class="slider_next_4"></button>
+            </div>
+        </div>
+        <div class="img2">
+            <h3 class="based_inf">
+                Наш сайт — это не только инструмент анализа статистики, но и путеводитель в мире образования, где каждый студент может найти ключи к своему успеху.
+            </h3>
+        </div>
+        <img class="guap2" src="{{ url_for('static', filename='images/guap2.jpg') }}">
+    </div>
+    <div class="footer">
+        <div class="support_line">
+            По вопросам пишите на почту 
+            <a href="mailto:ledygaga@gmail.com">ledygaga@gmail.com</a>
+        </div>
+        <div class="company">
+            © 2023, «Statistics»
+        </div>
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </div>
+  </body>
+</html>

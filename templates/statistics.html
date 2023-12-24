@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>statistics</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_for_input.css') }}">
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_content">
+        <img onclick="document.location='/'" class="brend" src="{{ url_for('static', filename='images/brend.png') }}">
+        <button onclick="document.location='/statistics'" class="statistics">click</button>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main_content">
+        <h1 class="content_name">Личный Прогноз успеха</h1>
+        <h3 class="content_inf">Добро пожаловать! Введите необходимую информацию, чтобы мы могли создать индивидуальный прогноз вашего успеха в следующем семестре. Мы уверены, что каждый студент - уникальная личность, и ваш вклад в наше исследование поможет нам лучше понять, как создать наилучшие условия для вашего академического роста.
+        </h3>
+        <h2>Предоставьте нам несколько ключевых данных, и мы воссоздадим картину вашей учебной жизни.</h2>
+        <div class="data_array">
+          <form method="post" action="/process_statistics">
+            <ul>
+              <li>
+                <h2>1. Сколько вам лет?</h2>
+                <input type="text" name="age" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>2. Ваш пол?</h2>
+                <input type="text" name="sex" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>3. Сколько приблизительно пар вы пропускаете в неделю?</h2>
+                <input type="text" name="omissions" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>4. Сколько приблизительно часов в неделю вы уделяете на выполнения домашнего задания и закрепления информации?</h2>
+                <input type="text" name="homework" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>5. Где вы проживаете?</h2>
+                <input type="text" name="type_life" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>6. Сколько вы зарабатываете с учетом стипендии?</h2>
+                <input type="text" name="salary" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>7. Сколько времени в часах занимает ваша дорога до ВУЗа?</h2>
+                <input type="text" name="way" class="value" placeholder="tut" >
+              </li>
+              <li>
+                <h2>8. Считаете ли вы высшим образованием необходимым?</h2>
+                <input type="text" name="mood" class="value" placeholder="tut" >
+              </li>
+            </ul>
+            <button type="submit" class="send">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_inf">
+        <div class="support_line">
+          По вопросам пишите на почту
+          <a href="mailto:ledygaga@gmail.com">ledygaga@gmail.com</a>
+      </div>
+      <div class="company">
+          © 2023, «Statistics»
+      </div>
+      </div>
+    </div>
+    <script>
+      const footer = document.querySelector('.footer');
+      function init() {
+      const height = document.documentElement.offsetHeight;
+      console.log(height);
+      if (height > 1240) {
+          footer.style.top = height - 1270 + 'px';
+          window.addEventListener('resize', init);
+      } else {
+          footer.style.top = 8 + 'px';
+          window.addEventListener('resize', init);
+      }
+      
+      }
+      init();
+    </script>
+  </body>
+</html>

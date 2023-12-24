@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Result</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_for_result.css') }}">
+      </head>
+    <body>
+        <div class="header">
+            <div class="header_content">
+            <img onclick="document.location='/'" class="brend" src="{{ url_for('static', filename='images/brend.png') }}">
+            <button onclick="document.location='/statistics'" class="statistics">click</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_content">
+                <div class="block">
+                    <div class="tut">
+                        <h1>Ваша возможная средняя оценка на этот семестр:</h1>
+                        <ul>
+                            {% for prediction in predictions %}
+                                <li>{{ prediction|round(2) }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_inf">
+            <div class="support_line">
+                По вопросам пишите на почту
+                <a href="mailto:ledygaga@gmail.com">ledygaga@gmail.com</a>
+            </div>
+            <div class="company">
+                © 2023, «Statistics»
+            </div>
+            </div>
+        </div>
+        <script>
+            const footer = document.querySelector('.footer');
+            function init() {
+            const height = document.documentElement.offsetHeight;
+            console.log(height);
+            if (height > 940) {
+                footer.style.top = height - 870 + 'px';
+                window.addEventListener('resize', init);
+            } else {
+                footer.style.top = 8 + 'px';
+                window.addEventListener('resize', init);
+            }
+            
+            }
+            init();
+        </script>
+    </body>
+</html>
